@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+import sys
+
+count = int(sys.stdin.readline())
+
+sums = []
+for i in range(count):
+    pair = sys.stdin.readline().split()
+    print int(pair[0])+int(pair[1]),

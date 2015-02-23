@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+import sys
+
+count = int(sys.stdin.readline())
+
+for i in range(count):
+    print i
+    print sys.stdin.readline()
