@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+import sys
+
+count = sys.stdin.readline()
+
+for i in range(int(count)):
+    pair = sys.stdin.readline().split()
+    print min(int(pair[0]), int(pair[1]))
+
+    

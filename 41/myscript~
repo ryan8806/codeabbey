@@ -1,0 +1,21 @@
+#!/usr/bin/python
+
+import sys
+
+def median(lst):
+    lst = sorted(lst)
+    if len(lst) < 1:
+        return None
+    if len(lst) %2 == 1:
+        return lst[((len(lst)+1)/2)-1]
+    if len(lst) %2 == 0:
+        return float(sum(lst[(len(lst)/2)-1:(len(lst)/2)+1]))/2.0
+
+count = sys.stdin.readline()
+
+for i in range(int(count)):
+    trip = sys.stdin.readline().split()
+    trip_ints = [int(i) for i in trip]
+    median = median(trip_ints)
+    print median,
+    

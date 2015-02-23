@@ -1,0 +1,12 @@
+#!/usr/bin/python
+
+import sys
+
+count = sys.stdin.readline()
+
+for i in range(int(count)):
+    pair = sys.stdin.readline()
+    dec = float(pair[0]) / float(pair[1])
+    print int(round(dec)),
+
+

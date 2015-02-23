@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+import sys
+
+count = sys.stdin.readline()
+
+for i in range(count):
+    trips = sys.stdin.readline().split()
+    print min(int(trips[0]), int(trips[1]), int(trips[2])),

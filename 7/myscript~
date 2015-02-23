@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+import sys
+
+def convert_to_celcius(f):
+    return float(f - 32) / 1.8000
+
+vals = sys.stdin.readline().split()
+del vals[0]
+
+
+for item in vals:
+    celc = convert_to_celcius(int(item))
+    print round(celc),
+

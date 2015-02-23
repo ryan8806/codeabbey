@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+import sys
+
+def calc(mylist):
+    result = 0
+    for x in mylist:
+        result += x
+        result *= 113
+        result %= 10000007
+    return result
+
+
+count = int(sys.stdin.readline())
+
+vals = sys.stdin.readline().split()
+valsi = [int(i) for i in vals]
+print calc(valsi)

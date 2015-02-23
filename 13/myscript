@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+import sys
+
+count = int(sys.stdin.readline())
+vals = sys.stdin.readline().split()
+for i in range(count):
+    sum = 0;
+    val = vals[i]
+    for j in range(len(val)):
+        sum += (j+1) * int(val[j])
+    print sum,
+        
+    

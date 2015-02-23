@@ -1,0 +1,12 @@
+#!/usr/bin/python
+
+import sys
+
+mylist = sys.stdin.readline().split()
+
+max = 0
+for i in mylist:
+    if int(i) > max:
+        max = int(i)
+
+print max

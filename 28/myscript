@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+import sys
+
+def assess(bmi):
+    if bmi < 18.5:
+        return "under"
+    elif bmi < 25.0:
+        return "normal"
+    elif bmi < 30.0:
+        return "over"
+    else:
+        return "obese"
+
+def calc_bmi(weight, height):
+    return float(weight) / (float(height) ** 2)
+
+count = int(sys.stdin.readline())
+
+for i in range(count):
+    stats = sys.stdin.readline().split()
+    print assess(calc_bmi(stats[0], stats[1])),
