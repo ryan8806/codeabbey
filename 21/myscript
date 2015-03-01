@@ -1,0 +1,16 @@
+#!/usr/bin/python
+
+import sys
+
+metadata = sys.stdin.readline()
+vals = sys.stdin.readline().split()
+counts = [0] * int(metadata[1])
+
+for v in vals:
+    counts[int(v)] += 1
+    print v, counts[int(v)]
+
+for c in counts:
+    if c != 0:
+        print c,
+

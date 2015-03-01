@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+import sys
+
+def next_val (x):
+    if x%2 == 0:
+        return x/2
+    else :
+        return x * 3 + 1
+
+def count_steps (x):
+    count = 0;
+    while x != 1:
+        x = next_val(x)
+        count += 1
+    return count;
+
+metadata = sys.stdin.readline()
+vals = sys.stdin.readline().split()
+
+for v in vals:
+    print count_steps(v),;

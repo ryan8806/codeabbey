@@ -1,0 +1,34 @@
+#!/usr/bin/python
+
+import sys
+
+def swap(array, i, j):
+    temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+
+
+
+
+
+size = sys.stdin.readline()
+vals = [int(v) for v in sys.stdin.readline().split()]
+
+pass_count = 0
+swap_count = 0
+
+while True:
+    swaps_this_pass = 0
+    for i in range(size-1):
+        if vals[i] > vals[i+1]:
+            swap(vals, i, i+1)
+            swaps_this_pass += 1
+
+    pass_count +=1
+    swap_count += swaps_this_pass
+    if swaps_this_pass == 0:
+        break
+
+print pass_count, swap_count
+        
+    

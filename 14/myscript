@@ -1,0 +1,26 @@
+#!/usr/bin/python
+
+import sys
+
+def apply_op(init_val, myinput):
+    op = myinput[0];
+    val = int(myinput[1])
+
+    if op == "*":
+        return init_val * val
+    elif op =="+":
+        return init_val + val
+    else:
+        return init_val % val
+
+
+
+init_val = int(sys.stdin.readline())
+
+operation = sys.stdin.readline()
+while operation != "":
+    init_val = apply_op(init_val, operation.split())
+    operation = sys.stdin.readline()
+
+print init_val
+
